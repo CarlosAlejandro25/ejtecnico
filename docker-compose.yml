@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  clientepersonaservice:
+    build:
+      context: ./ClientePersonaService
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/cliente_persona_db
+      SPRING_DATASOURCE_USERNAME: "Charlie"
+      SPRING_DATASOURCE_PASSWORD: "0823"
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_RABBITMQ_HOST: rabbitmq
+    depends_on:
+      - mysql
+      - rabbitmq
+    networks:
+      - springboot-network
+
+  cuentamovimientoservice:
+    build:
+      context: ./CuentaMovimientosService
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/cuenta_movimientos_db
+      SPRING_DATASOURCE_USERNAME: "Charlie"
+      SPRING_DATASOURCE_PASSWORD: "0823"
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_RABBITMQ_HOST: rabbitmq
+    depends_on:
+      - mysql
+      - rabbitmq
+    networks:
+      - springboot-network
+
+  mysql:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: cliente_persona_db
+      MYSQL_USER: Charlie
+      MYSQL_PASSWORD: 0823
+    networks:
+      - springboot-network
+
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - springboot-network
+
+networks:
+  springboot-network:
+    driver: bridge

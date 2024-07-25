@@ -1,0 +1,330 @@
+{
+	"info": {
+		"_postman_id": "a6419ebb-4733-40ee-8d3e-01398cec5926",
+		"name": "ejercicio-tecnico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37163085"
+	},
+	"item": [
+		{
+			"name": "Get Clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cliente Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes/36",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"36"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"clienteId\": \"cliente126\",\r\n  \"contrasena\": \"Password1!\",\r\n  \"estado\": true,\r\n  \"nombre\": \"Alejandro Rivadeneira\",\r\n  \"genero\": \"Masculino\",\r\n  \"edad\": 30,\r\n  \"identificacion\": \"1234567890\",\r\n  \"direccion\": \"Calle Falsa 123, Quito\",\r\n  \"telefono\": \"0987654321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"clienteId\": \"cliente144\",\r\n  \"contrasena\": \"Password1!\",\r\n  \"estado\": true,\r\n  \"nombre\": \"Alejandro Rivadeneira\",\r\n  \"genero\": \"Femenino\",\r\n  \"edad\": 30,\r\n  \"identificacion\": \"1234567890\",\r\n  \"direccion\": \"Calle Falsa 123, Quito\",\r\n  \"telefono\": \"0987654321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes/40",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes/38",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"38"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cuentas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/cuentas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cuenta Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/cuentas/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cuentas",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Cuentas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroCuenta\": \"1234567890\",\r\n    \"tipoCuenta\": \"Ahorros\",\r\n    \"saldoInicial\": 500.0,\r\n    \"estado\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/cuentas?clienteId=cliente123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cuentas"
+					],
+					"query": [
+						{
+							"key": "clienteId",
+							"value": "cliente123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Cuentas",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroCuenta\": \"1234567890\",\r\n    \"tipoCuenta\": \"Corriente\",\r\n    \"saldoInicial\": 700.0,\r\n    \"estado\": true,\r\n    \"clienteId\": \"cliente123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/cuentas/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cuentas",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Cuentas",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/cuentas/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cuentas",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Movimientos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cuentaId\": 12,\r\n    \"tipoMovimiento\": \"Deposito\",\r\n    \"valor\": 250\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/movimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/reportes?clienteId=cliente6&fechaInicio=2024-07-22%2000:00:00&fechaFin=2024-07-24%2023:59:59",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/reportes?clienteId=cliente6&fechaInicio=2024-07-22%2000:00:00&fechaFin=2024-07-24%2023:59:59",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"reportes"
+					],
+					"query": [
+						{
+							"key": "clienteId",
+							"value": "cliente6"
+						},
+						{
+							"key": "fechaInicio",
+							"value": "2024-07-22%2000:00:00"
+						},
+						{
+							"key": "fechaFin",
+							"value": "2024-07-24%2023:59:59"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ejercicio.tecnico.clientePersonaService.ClienteControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-07-25T14:30:38" hostname="DESKTOP-K33L7QA" time="0.297">
+  <properties/>
+  <testcase name="testGetAllClientes()" classname="com.ejercicio.tecnico.clientePersonaService.ClienteControllerTest" time="0.152"/>
+  <testcase name="testCreateCliente()" classname="com.ejercicio.tecnico.clientePersonaService.ClienteControllerTest" time="0.144"/>
+  <system-out><![CDATA[09:30:36.142 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ejercicio.tecnico.clientePersonaService.ClienteControllerTest]: ClienteControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:30:36.252 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ejercicio.tecnico.clientePersonaService.ClientePersonaServiceApplication for test class com.ejercicio.tecnico.clientePersonaService.ClienteControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-07-25T09:30:36.537-05:00  INFO 19100 --- [ClientePersonaService] [    Test worker] c.e.t.c.ClienteControllerTest            : Starting ClienteControllerTest using Java 17.0.11 with PID 19100 (started by Charlie in C:\Users\Charlie\Documents\prueba-tecnica\ClientePersonaService)
+2024-07-25T09:30:36.537-05:00  INFO 19100 --- [ClientePersonaService] [    Test worker] c.e.t.c.ClienteControllerTest            : No active profile set, falling back to 1 default profile: "default"
+2024-07-25T09:30:38.439-05:00  INFO 19100 --- [ClientePersonaService] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-25T09:30:38.439-05:00  INFO 19100 --- [ClientePersonaService] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-25T09:30:38.439-05:00  INFO 19100 --- [ClientePersonaService] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-07-25T09:30:38.502-05:00  INFO 19100 --- [ClientePersonaService] [    Test worker] c.e.t.c.ClienteControllerTest            : Started ClienteControllerTest in 2.187 seconds (process running for 3.087)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

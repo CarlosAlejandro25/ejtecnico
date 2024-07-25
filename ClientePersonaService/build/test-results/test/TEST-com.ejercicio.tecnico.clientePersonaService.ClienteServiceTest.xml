@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ejercicio.tecnico.clientePersonaService.ClienteServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-25T14:30:42" hostname="DESKTOP-K33L7QA" time="0.435">
+  <properties/>
+  <testcase name="testCreateCliente()" classname="com.ejercicio.tecnico.clientePersonaService.ClienteServiceTest" time="0.435"/>
+  <system-out><![CDATA[Mensaje enviado: cliente4
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
