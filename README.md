@@ -1,4 +1,4 @@
-# neoris_ejtecnico
+# ejtecnico
 Ejercicio técnico complejidad semisenior
 
 # Instrucciones de ejecución.
